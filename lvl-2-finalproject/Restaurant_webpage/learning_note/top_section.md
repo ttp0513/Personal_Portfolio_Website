@@ -1,0 +1,6 @@
+# Errors in Code
+| **Index** | **Error**                                | **What I Did**                                                       | **What Error Occurred**                                               | **Resolution**                                                                 |
+|-----------|-------------------------------------------|----------------------------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------|
+| 1         | Misused `getElementsByClassName`          | Assigned `let navBar = document.getElementsByClassName("nav-bar");` and tried `navBar.addEventListener(...)` | `Uncaught TypeError: menuBar.addEventListener is not a function` — because `navBar` is an HTMLCollection | Use `document.querySelector(".nav-bar")` to select a single element, or loop through the collection if multiple elements exist |
+| 2         | Adjust the nav Item          | Attempted to use padding 10px 0 to make the nav items below the nav icon  | Created a large space below the last nav item | Use padding 10px 0 0 0 to make the bottom padding be 0
+
