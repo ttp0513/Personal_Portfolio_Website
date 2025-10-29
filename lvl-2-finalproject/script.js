@@ -10,8 +10,13 @@ menuBar.addEventListener('click', () => {
 const toP = document.querySelector('.top')
 window.addEventListener('scroll', () => {
     const windowY = this.pageYOffset;
-    if (windowY > 500){toP.classList.add('active')}
-    else {toP.classList.remove('active')};
+    if (windowY > 500){
+        toP.classList.add('active');
+        document.querySelector('.logo').classList.add("logo-light");
+    } else {
+        toP.classList.remove('active')
+        document.querySelector('.logo').classList.remove("logo-light");
+    };
 });
 
 

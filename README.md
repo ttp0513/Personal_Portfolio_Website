@@ -38,9 +38,10 @@ Each log entry represents a milestone in my process of learning, problem-solving
 
 | Date | Progress Summary | Notes / Learnings |
 |------|------------------|-------------------|
-| **Oct 2025** | Set up initial project folder and GitHub repo | Learned basic Git commands and workflow |
-| **Oct 2025** | Built the structure for Home and About pages | Practiced HTML/CSS/JS and responsive design |
-| **Oct 2025** | Added navigation bar and footer | Learned how to create reusable components |
+| **Oct 20 2025** | Set up initial project folder and GitHub repo | Learned basic Git commands and workflow |
+| **Oct 21 2025** | Built the structure for Home and About pages | Practiced HTML/CSS/JS and responsive design |
+| **Oct 24 2025** | Added navigation bar and footer | Learned how to create reusable components |
+| **Oct 29 2025** | Added About page | Practiced Layout - Plan to discover more dynamic and CSS styles to make the page more impressive |
 | **Nov 2025** *(planned)* | Started integrating TailwindCSS | Explored utility-first styling and layout control |
 | **Dec 2025** *(planned)* | Begin building Projects section | Will include project cards with hover effects |
 | **Jan 2026** *(planned)* | Add backend contact form integration | Goal: learn basic form handling and APIs |

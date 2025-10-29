@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Niconne&family=Oregano:ital@0;1&display=swap');
 /* Global Styles */
 :root {
-    --main-color:#d9caad;
-    --secondary-color:  #61561e;
-    --text-color: #4f4406;
+    --main-color: #4f4406;
+    --secondary-color:#deddc3;
+    --title: #c7983c;
+
  
 }
 
@@ -15,24 +16,10 @@
     outline: none;
 }
 
-.btn {
-    background-color: transparent;
-    padding: 15px 30px;
-    border: 2.5px solid var(--secondary-color); 
-    border-radius: 50px;
-    color: var(--secondary-color);
-    font-size: 24px;
-    font-style: bold;
-    font-family: 'Google Sans', sans-serif;
-    cursor: pointer;
+.section-padding{
+    padding: 70px 0;
 }
 
-.btn:hover {
-    background-color: var(--secondary-color);
-    color: var(--main-color);
-    transition: all 0.3s ease;
-    transform: scale(1.1);
-}
 
 /* Reset default styles for all elements */
 ul {
@@ -70,7 +57,7 @@ Container and Row Styles */
     z-index: 1000;
 
 }
-/* top animation after scrolling down */ 
+/* Top animation after scrolling down */ 
 .top::before {
     content: '';
     display: block;
@@ -88,12 +75,16 @@ Container and Row Styles */
 }
 
 
+
 /* Logo styles */   
 .top .logo img {
     width: 100px;
-
-   
 }
+
+.logo-light{
+filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-rotate(30deg);
+}
+
 
 /* Hamburger nav styles */
 .top .nav-bar {
@@ -179,7 +170,7 @@ Container and Row Styles */
   position: relative; 
   z-index: 2;
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--secondary-color);
   text-align: center;
   font-size: 30px;
   font-family: "Dancing Script", cursive;
@@ -271,8 +262,7 @@ Container and Row Styles */
 
 .hero-image .hero-image-content {
     text-align: center;
-
-    color: whitesmoke;
+    color: rgb(237, 239, 226);
 }
 
 .hero-image-content h2{
@@ -287,11 +277,112 @@ Container and Row Styles */
 }
 
 .hero-image-content p {
-    font-size: 30px;
+    font-size: 35px;
     font-family: "Dancing Script", monospace;
     font-optical-sizing: auto;
     font-weight: 500; 
     font-style: normal;
     margin: 15px 0 20px 0;
 
+}
+
+/* Hero Button Styles */
+
+.hero-btn {
+    background-color: transparent;
+    padding: 15px 30px;
+    border: 2.5px solid var(--main-color); 
+    border-radius: 50px;
+    color: var(--main-color);
+    font-size: 24px;
+    font-style: bold;
+    font-family: 'Google Sans', sans-serif;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
+
+/* About Page Styles */
+.about-item {
+    width:  calc(100%/2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about{
+
+    background-color: var(--main-color);
+}
+
+/* About Title */ 
+
+.about-title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-title h2{
+    font-size: 55px;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-style: bold;
+    padding-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.about-title h2::before{
+    content: attr(data-title);
+    display: block;
+    color: var(--title);
+    font-size: 30px;
+}
+
+/* About Img */ 
+.about-item img{
+    width: 70%;
+    margin: 0 0 0 20px;
+    border-radius: 10px;
+}
+
+/* About Content */
+.about-item h2{
+    font-size: 35px;
+    font-family: "Dancing Script", cursive;
+    font-style: bold;
+    font-weight: 700;
+    color: var(--title);
+}
+.about-item p{
+    margin: 15px 0 30px 0;
+    word-spacing: 1.3px;
+    font-size: 24px;
+    color: var(--secondary-color);
+
+}
+
+/* About button */
+.about-btn {
+    background-color: transparent;
+    padding: 15px 30px;
+    border: 2.5px solid var(--secondary-color); 
+    border-radius: 50px;
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-style: bold;
+    font-family: 'Google Sans', sans-serif;
+    cursor: pointer;
+}
+
+.about-btn:hover {
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    transition: all 0.3s ease;
+    transform: scale(1.1);
 }
