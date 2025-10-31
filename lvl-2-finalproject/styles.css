@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Niconne&family=Oregano:ital@0;1&display=swap');
 /* Global Styles */
 :root {
-    --main-color: #4f4406;
-    --secondary-color:#deddc3;
+    --main-color: #3b3305;
+    --secondary-color:#f5f0d0;
     --title: #c7983c;
-
- 
+    --about-color: #4a410a;
+    --menu-color: #3e380c;
 }
 
 * {
@@ -14,6 +14,10 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
+}
+
+body{
+    overflow-x: hidden;
 }
 
 .section-padding{
@@ -36,7 +40,7 @@ a {
 Container and Row Styles */
 .container {
     margin: auto;
-    max-width: 93%;
+    max-width: 95%;
 }
 
 .row {
@@ -78,7 +82,7 @@ Container and Row Styles */
 
 /* Logo styles */   
 .top .logo img {
-    width: 100px;
+    width: 120px;
 }
 
 .logo-light{
@@ -149,7 +153,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 /* Navigation item styles */
 .nav-items {
     position: absolute;
-    width: 15vw;
+    width: 13vw;
     height: 100vh;
     background-color: var(--main-color);
     right: 0;
@@ -199,11 +203,14 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
   background: var(--secondary-color); 
 }
 
-.nav-items a:hover:after{ width: 100%; }
+.nav-items a:hover:after {
+     width: 100%;
+    }
+
 /* Nav Logo Style */
 .nav-items .logo img {
-    width: 150px;
-
+    width: 200px;
+    margin-top: 50vh;
 }
 
 .nav-items .logo {
@@ -316,8 +323,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 }
 
 .about{
-
-    background-color: var(--main-color);
+    background-color: var(--about-color);
 }
 
 /* About Title */ 
@@ -347,7 +353,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 /* About Img */ 
 .about-item img{
     width: 70%;
-    margin: 0 0 0 20px;
+    margin: auto;
     border-radius: 10px;
 }
 
@@ -378,6 +384,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     font-style: bold;
     font-family: 'Google Sans', sans-serif;
     cursor: pointer;
+    margin-bottom: 5vh;
 }
 
 .about-btn:hover {
@@ -386,3 +393,90 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     transition: all 0.3s ease;
     transform: scale(1.1);
 }
+
+
+/* About - Quote box */
+.quote-box {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-family: 'Dancing Script', cursive;
+  font-size: 56px;
+  padding: 20px;
+  border-left: 5px solid var(--title);
+  width: 80%;
+  margin: 30px 0;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.quote-box.active {
+  animation: fadeFloat 2.5s ease-out forwards;
+  opacity: 0;
+}
+
+.quote-box span {
+  font-size: 40px;
+  display: block;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+@keyframes fadeFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Menu Styles */
+.menu{
+    background-color: var(--menu-color);
+}
+
+.menu-title, .menu-nav {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.menu-button {
+    background-color: transparent;
+    margin: 0px 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    color: var(--secondary-color);
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+}
+
+.menu-title h2 {
+    font-size: 55px;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.menu-title h2::before{
+    content: attr(data-title);
+    display: block;
+    color: var(--title);
+    font-size: 30px;
+}
+
+.menu-button:hover{
+    color: var(--title);
+    transform: scale(1.2);
+}
+
+
