@@ -1,0 +1,95 @@
+{
+  "phansspecials": [
+    {
+      "name": "Pho Bo",
+      "description": "Beef noodle soup with herbs and spices",
+      "price": 12.99
+    },
+    {
+      "name": "Bun Cha",
+      "description": "Grilled pork with vermicelli and dipping sauce",
+      "price": 11.50
+    },
+    {
+      "name": "Bun Rieu",
+      "description": "Crab and tomato noodle soup with tofu and herbs",
+      "price": 13.50
+    },
+    {
+      "name": "Long Xao Nghe",
+      "description": "Stir-fried pork intestines with turmeric and garlic",
+      "price": 12.00
+    }
+  ],
+  "snacks": [
+    {
+      "name": "Spring Rolls",
+      "description": "Crispy rolls with pork and veggies",
+      "price": 6.00
+    },
+    {
+      "name": "Shrimp Chips",
+      "description": "Savory shrimp-flavored crackers",
+      "price": 4.50
+    }
+  ],
+  "dessert": [
+    {
+      "name": "Che Ba Mau",
+      "description": "Three-color dessert with beans, jelly, and coconut milk",
+      "price": 5.50
+    },
+    {
+      "name": "Home-made Soft Yogurt",
+      "description": "Creamy Vietnamese-style yogurt, lightly sweetened",
+      "price": 3.50
+    },
+    {
+      "name": "Brownie",
+      "description": "Rich chocolate brownie with a soft center",
+      "price": 4.00
+    },
+    {
+      "name": "Cheesecake",
+      "description": "Classic cheesecake with a buttery crust",
+      "price": 5.00
+    }
+  ],
+"drink": [
+  {
+    "name": "Vietnamese Iced Coffee",
+    "description": "Strong coffee with sweetened condensed milk",
+    "price": 4.00
+  },
+  {
+    "name": "Passion Fruit Yogurt Drink",
+    "description": "Tangy passion fruit blended with creamy yogurt",
+    "price": 4.50
+  },
+  {
+    "name": "Kumquat Yogurt Drink",
+    "description": "Zesty kumquat paired with smooth yogurt",
+    "price": 4.50
+  },
+  {
+    "name": "Lychee Ade",
+    "description": "Refreshing lychee soda with a hint of citrus",
+    "price": 5.25
+  },
+  {
+    "name": "Strawberry Ade",
+    "description": "Sweet strawberry fizz with a splash of lemon",
+    "price": 4.25
+  },
+  {
+    "name": "Lemonade",
+    "description": "Classic lemonade made fresh with real lemons",
+    "price": 3.75
+  },
+  {
+    "name": "Avocado Smoothie",
+    "description": "Creamy avocado blended with milk and a touch of honey",
+    "price": 5.00
+  }
+]
+}
