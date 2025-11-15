@@ -1,24 +1,34 @@
 {
-  "phansspecials": [
+  "specials": [
     {
       "name": "Pho Bo",
       "description": "Beef noodle soup with herbs and spices",
-      "price": 12.99
+      "price": 12.99,
+      "image_url": "https://img.freepik.com/premium-photo/delicius-pho-bo-vietnamese-soup-with-beef-lime-asian-food_245481-602.jpg" 
     },
     {
       "name": "Bun Cha",
       "description": "Grilled pork with vermicelli and dipping sauce",
-      "price": 11.50
+      "price": 11.50,
+      "image_url": "https://th.bing.com/th/id/R.ad6cdccf4f6465d585da42a10923ad8f?rik=agCRVgWBizwp1g&pid=ImgRaw&r=0" 
     },
     {
       "name": "Bun Rieu",
       "description": "Crab and tomato noodle soup with tofu and herbs",
-      "price": 13.50
+      "price": 13.50,
+      "image_url": "https://th.bing.com/th/id/R.e5ec4e4cb91ce9179a1c235a120a3b3d?rik=dJ8M7I%2bcD7TlaQ&riu=http%3a%2f%2ffile.hstatic.net%2f1000394081%2farticle%2fcach-che-bien-bun-rieu-cua_bbccd59561b846939599fd6241716857.jpg&ehk=W2TnSXBPzWWYCTQKdJn%2bWEv8TpNzcDGuQlKXbQ5OLxI%3d&risl=&pid=ImgRaw&r=0"
     },
     {
       "name": "Long Xao Nghe",
       "description": "Stir-fried pork intestines with turmeric and garlic",
-      "price": 12.00
+      "price": 12.00,
+      "image_url": "https://cdn.yeutre.vn/medias/uploads/209/209860-long-xao-nghe.jpg"
+    },
+    {
+      "name": "Long Xao Nghe",
+      "description": "Stir-fried pork intestines with turmeric and garlic",
+      "price": 12.00,
+      "image_url": "https://cdn.yeutre.vn/medias/uploads/209/209860-long-xao-nghe.jpg"
     }
   ],
   "snacks": [
