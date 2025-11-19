@@ -21,7 +21,7 @@ body{
 }
 
 .section-padding{
-    padding: 70px 0;
+    padding: 40px 0;
 }
 
 
@@ -485,17 +485,18 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 /* Menu Container */
 .menu-container{
     width: 100%;
+    min-height: 100vh;
     margin: 30px auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    align-items: space-around;
-
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    justify-items: center;
 }
 
 .menu-container .menu_card{
-    width: 30%;
-    height: 48%;
+    width: 90%;
+    height: 550px;
     padding-top: 10px;
     margin-bottom: 20px;
     background-color: var(--secondary-color);
@@ -506,9 +507,11 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 .menu-container .menu_card .menu_image{
     width: 90%;
-    height: 55%;
-    margin: 0 auto;
+    height: 300px;
+    margin: auto;
     overflow: hidden;
+    padding-top: 10px;
+    border-radius: 10px;
 }
 
 .menu-container .menu_card .menu_image img{
@@ -517,71 +520,43 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     object-fit: cover;
     object-position: center;
     transition: 0.3s;
+    border-radius: 10px;
 }
 
 .menu-container .menu_card .menu_image:hover img{
-    transform: scale(1.1);
-}
-
-.menu-container .menu_card .small_card{
-    width: 45px;
-    height: 45px;
-    float: right;
-    position: relative;
-    top: -240px;
-    right: -8px;
-    opacity: 0;
-    border-radius: 7px;
-    transition: 0.3s;
-}
-
-.menu-container .menu_card:hover .small_card{
-    position: relative;
-    top: -240px;
-    right: 20px;
-    opacity: 1;
-}
-
-.menu-container .menu_card .small_card i{
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 50px;
-    color: #000;
-    cursor: pointer;
-    text-shadow: 0 0 6px #000;
-    transition: 0.2s;
-}
-
-.menu-container .menu_card .small_card i:hover{
-    color: #fac031;
+    transform: scale(0.8);
 }
 
 .menu-container .menu_card .menu_info h2{
-    width: 60%;
+    width: 90%;
     text-align: center;
     margin: 10px auto 10px auto;
-    font-size: 25px;
-    color: #fac031;
+    font-size: 36px;
+    color: var(--main-color);
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    overflow-x: hidden;
 }
 
 .menu-container .menu_card .menu_info p{
+    width: 90%;
+    height: 50px;
+    margin: 0 15px;
     text-align: center;
-    margin-top: 8px;
-    line-height: 21px;
+    line-height: 24px;
+    font-size: 20px;
+    overflow: hidden;
 }
 
 .menu-container .menu_card .menu_info h3{
     text-align: center;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #3b3305;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
 }
 
-.menu-container .menu_card .menu_info .menu_icon{
-    color: #fac031;
-    text-align: center;
-    margin: 10px 0 10px 0;
-}
 
 .menu-container .menu_card .menu_info .menu_btn{
     display: flex;
@@ -593,5 +568,12 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     padding: 8px 10px;
     margin: 0 80px;
     transition: 0.3s;
+    border-radius: 50px;
+    transition: all 0.3s ease;
 }
 
+.menu-container .menu_card .menu_info .menu_btn:hover{
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    transform: scale(1.2);
+}

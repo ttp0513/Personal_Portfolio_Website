@@ -21,85 +21,99 @@
     {
       "name": "Long Xao Nghe",
       "description": "Stir-fried pork intestines with turmeric and garlic",
-      "price": 12.00,
+      "price": 15.00,
       "image_url": "https://cdn.yeutre.vn/medias/uploads/209/209860-long-xao-nghe.jpg"
     },
     {
-      "name": "Long Xao Nghe",
-      "description": "Stir-fried pork intestines with turmeric and garlic",
-      "price": 12.00,
-      "image_url": "https://cdn.yeutre.vn/medias/uploads/209/209860-long-xao-nghe.jpg"
+      "name": "Bun Bo Hue",
+      "description": "Spicy beef noodle soup with tender pork leg, lemongrass and herbs",
+      "price": 14.99,
+      "image_url": "https://takestwoeggs.com/wp-content/uploads/2024/10/Bun-Bo-Hue-Spicy-Vietnamese-Beef-Noodle-Soup-8.jpg"
     }
   ],
   "snacks": [
     {
       "name": "Spring Rolls",
       "description": "Crispy rolls with pork and veggies",
-      "price": 6.00
+      "price": 6.00,
+      "image_url": "https://mymorningmocha.com/wp-content/uploads/2023/11/vegetable-spring-rolls-recipe.jpg"
     },
     {
-      "name": "Shrimp Chips",
-      "description": "Savory shrimp-flavored crackers",
-      "price": 4.50
+      "name": "Assorted Fried Fish Balls",
+      "description": "Crispy fish balls with dipping sauce",
+      "price": 9.99,
+      "image_url": "https://tse2.mm.bing.net/th/id/OIP.xo525rnc23Z-Xuo6Q_KTKQHaFw?rs=1&pid=ImgDetMain&o=7&rm=3"
     }
   ],
   "dessert": [
     {
       "name": "Che Ba Mau",
       "description": "Three-color dessert with beans, jelly, and coconut milk",
-      "price": 5.50
+      "price": 5.50,
+      "image_url":"https://takestwoeggs.com/wp-content/uploads/2025/08/Pouring-Che-Ba-Mau-Vietnamese-Three-Color-Dessert.jpg"
     },
     {
       "name": "Home-made Soft Yogurt",
-      "description": "Creamy Vietnamese-style yogurt, lightly sweetened",
-      "price": 3.50
+      "description": "Creamy soft yogurt, lightly sweetened",
+      "price": 3.50,
+      "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR8jP8yqfcoL8iCgl7kGKJaNmbNliKlPI7Bg&s"
     },
     {
       "name": "Brownie",
       "description": "Rich chocolate brownie with a soft center",
-      "price": 4.00
+      "price": 4.00,
+      "image_url": "https://sugarspunrun.com/wp-content/uploads/2019/08/Homemade-Brownies-Recipe-1-of-1.jpg"
     },
     {
       "name": "Cheesecake",
-      "description": "Classic cheesecake with a buttery crust",
-      "price": 5.00
+      "description": "Classic cheesecake slice with a buttery crust",
+      "price": 5.00,
+      "image_url": "https://cookiesandcups.com/wp-content/uploads/2019/09/perfectcheesecake-10-570x775-1.jpg"
+    },
+    {
+      "name": "Dubai Chocolate Cookies",
+      "description": "Rich chocolate cookies with homemade pistachio and high-quality kunafa filling",
+      "price": 7.50,
+      "image_url":"https://buttermilkbysam.com/wp-content/uploads/2025/03/dubai-chocolate-cookies-2.jpg"
     }
   ],
 "drink": [
   {
     "name": "Vietnamese Iced Coffee",
     "description": "Strong coffee with sweetened condensed milk",
-    "price": 4.00
+    "price": 4.00,
+    "image_url": "https://assets.epicurious.com/photos/54b1788dc6a78d1a4a60cf17/master/pass/395453_vietnamese-ice-coffee_1x1.jpg"
   },
   {
     "name": "Passion Fruit Yogurt Drink",
     "description": "Tangy passion fruit blended with creamy yogurt",
-    "price": 4.50
+    "price": 4.50,
+    "image_url": "https://www.vibrantplate.com/wp-content/uploads/2016/08/Mango-smoothie-30-1.jpg"
   },
   {
     "name": "Kumquat Yogurt Drink",
     "description": "Zesty kumquat paired with smooth yogurt",
-    "price": 4.50
+    "price": 4.50,
+    "image_url": "https://www.richs.com.vn/images/cong-thuc/Th%E1%BB%A9c%20u%E1%BB%91ng/Yogurt-Tac/DSC02281.jpg"
   },
   {
     "name": "Lychee Ade",
     "description": "Refreshing lychee soda with a hint of citrus",
-    "price": 5.25
+    "price": 5.25,
+    "image_url": "https://tiimg.tistatic.com/fp/1/004/439/lychee-fruit-juice-862.jpg"
   },
   {
-    "name": "Strawberry Ade",
-    "description": "Sweet strawberry fizz with a splash of lemon",
-    "price": 4.25
-  },
-  {
-    "name": "Lemonade",
-    "description": "Classic lemonade made fresh with real lemons",
-    "price": 3.75
+    "name": "Lemongrass and Ginger Tea",
+    "description": "Soothing tea with fresh lemongrass and ginger",
+    "price": 3.75,
+    "image_url": "https://www.foxyfolksy.com/wp-content/uploads/2022/08/lemongrass-and-ginger-juice.jpg"
+
   },
   {
     "name": "Avocado Smoothie",
     "description": "Creamy avocado blended with milk and a touch of honey",
-    "price": 5.00
+    "price": 5.00,
+    "image_url": "https://www.natalieshealth.com/wp-content/uploads/2022/01/Avocado-Smoothie-featured-image.jpeg"
   }
 ]
 }
