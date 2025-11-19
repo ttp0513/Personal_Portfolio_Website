@@ -45,7 +45,7 @@ const menuContainer = document.querySelector('.menu-container');
                         ${description}
                     </p>
                     <h3>$${price.toFixed(2)}</h3>
-                    <a href="" class="menu_btn">Order</a>
+                    <a href="#" class="menu_btn">Order</a>
                 </div>
 
             </div> 
@@ -88,7 +88,7 @@ snacks.addEventListener('click', () => {
                         ${description}
                     </p>
                     <h3>$${price.toFixed(2)}</h3>
-                    <a href="" class="menu_btn">Order</a>
+                    <a href="#" class="menu_btn">Order</a>
                 </div>
 
             </div> 
@@ -126,7 +126,7 @@ dessert.addEventListener('click', () => {
                         ${description}
                     </p>
                     <h3>$${price.toFixed(2)}</h3>
-                    <a href="" class="menu_btn">Order</a>
+                    <a href="#" class="menu_btn">Order</a>
                 </div>
 
             </div> 
@@ -164,7 +164,7 @@ drink.addEventListener('click', () => {
                         ${description}
                     </p>
                     <h3>$${price.toFixed(2)}</h3>
-                    <a href="" class="menu_btn">Order</a>
+                    <a href="#" class="menu_btn">Order</a>
                 </div>
                 
             </div> 
