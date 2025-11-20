@@ -22,159 +22,83 @@ window.addEventListener('scroll', () => {
     };
 });
 
-// Default Menu Items Load - Specials
+// Menu Rendering Logic
+
 const menuContainer = document.querySelector('.menu-container');
-    menuContainer.innerHTML = '';
-    // Fetch Menu Data from menu.json and log it to the console
-    async function loadSpecialMenu() {
-    try {
-    const res = await fetch('./menu.json');
-    const data = await res.json();
-    const specials = data.specials;
-    specials.forEach(({ name, description, price, image_url }) => {
-        menuContainer.innerHTML += `
 
-        <div class="menu_card">
-                <div class="menu_image">
-                    <img src="${image_url}" alt="${name}" title="${name}"/>
-                </div>
+// 1 Cache menu data
+let menuData = null;
 
-                <div class="menu_info">
-                    <h2>${name}</h2>
-                    <p>
-                        ${description}
-                    </p>
-                    <h3>$${price.toFixed(2)}</h3>
-                    <a href="#" class="menu_btn">Order</a>
-                </div>
+async function getMenuData() {
+  if (menuData) return menuData;   // use cached data if it exists
 
-            </div> 
-        `;
-    });
+  const res = await fetch('./menu.json');
+  menuData = await res.json();
+  return menuData;
+}
+
+// 2 Generic render function
+async function renderMenu(categoryKey) {
+  try {
+    const data = await getMenuData();
+    const items = data[categoryKey] || [];
+
+    // build all cards first
+    const html = items
+      .map(({ name, description, price, image_url }) => 
+        `<div class="menu_card">
+          <div class="menu_image">
+            <img src="${image_url}" alt="${name}" title="${name}"/>
+          </div>
+
+          <div class="menu_info">
+            <h2>${name}</h2>
+            <p>${description}</p>
+            <h3>$${price.toFixed(2)}</h3>
+            <a href="#" class="menu_btn">Order</a>
+          </div>
+        </div>`
+      )
+      .join('');
+
+    menuContainer.innerHTML = html;  // write once ✨
+
+
   } catch (err) {
     console.error('Error loading menu:', err);
+    menuContainer.innerHTML = '<p style="color: red; text-align: center;">Unable to load menu items.</p>';
   }
 }
-loadSpecialMenu();
-                
-// Event Listener for Specials Menu Button
+
+// 3 Default load = specials
+renderMenu('specials');
+
+// 4 Button listeners
 const special = document.querySelector('.menu-button.special');
 special.addEventListener('click', () => {
-    menuContainer.innerHTML = '';
-    loadSpecialMenu();
-}
-);
+  renderMenu('specials');
+});
 
-// Event Listener for Snacks Menu Button
-const snacks = document.querySelector('.menu-button.snack');
-snacks.addEventListener('click', () => {
-    const scrollY = window.scrollY;
-    menuContainer.innerHTML = '';
-    // Fetch Menu Data from menu.json and log it to the console
-    async function loadSnackMenu() {
-    try {
-    const res = await fetch('./menu.json');
-    const data = await res.json();
-    const snacks = data.snacks;
-    snacks.forEach(({ name, description, price, image_url }) => {   
-        menuContainer.innerHTML += `
-        <div class="menu_card">
-                <div class="menu_image">
-                    <img src="${image_url}" alt="${name}" title="${name}"/>
-                </div>
-                <div class="menu_info">
-                    <h2>${name}</h2>
-                    <p>
-                        ${description}
-                    </p>
-                    <h3>$${price.toFixed(2)}</h3>
-                    <a href="#" class="menu_btn">Order</a>
-                </div>
-
-            </div> 
-        `;
-    });
-  } catch (err) {
-    console.error('Error loading menu:', err);
-  }
-}
-loadSnackMenu();
-window.scrollTo(0, scrollY);
-}
-);
-
-// Event Listener for Desserts Menu Button
-const dessert = document.querySelector('.menu-button.dessert');
-dessert.addEventListener('click', () => {
-    const scrollY = window.scrollY;
-    menuContainer.innerHTML = '';
-    // Fetch Menu Data from menu.json and log it to the console
-    async function loadDessertMenu() {
-    try {
-    const res = await fetch('./menu.json');
-    const data = await res.json();
-    const desserts = data.dessert;
-    desserts.forEach(({ name, description, price, image_url }) => {   
-        menuContainer.innerHTML += `
-        <div class="menu_card">
-                <div class="menu_image">
-                    <img src="${image_url}" alt="${name}" title="${name}"/>
-                </div>
-                <div class="menu_info">
-                    <h2>${name}</h2>
-                    <p>
-                        ${description}
-                    </p>
-                    <h3>$${price.toFixed(2)}</h3>
-                    <a href="#" class="menu_btn">Order</a>
-                </div>
-
-            </div> 
-        `;
-    });
-  } catch (err) {
-    console.error('Error loading menu:', err);
-  }
-}
-loadDessertMenu();
-window.scrollTo(0, scrollY);
-}
-);
-
-// Event Listener for Drinks Menu Button
-const drink = document.querySelector('.menu-button.drink');
-drink.addEventListener('click', () => {
-    const scrollY = window.scrollY;
-    menuContainer.innerHTML = '';
-    // Fetch Menu Data from menu.json and log it to the console
-    async function loadDrinkMenu() {
-    try {
-    const res = await fetch('./menu.json');
-    const data = await res.json();
-    const drinks = data.drink;
-    drinks.forEach(({ name, description, price, image_url }) => {   
-        menuContainer.innerHTML += `
-        <div class="menu_card">
-                <div class="menu_image">
-                    <img src="${image_url}" alt="${name}" title="${name}"/>
-                </div>
-                <div class="menu_info">
-                    <h2>${name}</h2>
-                    <p>
-                        ${description}
-                    </p>
-                    <h3>$${price.toFixed(2)}</h3>
-                    <a href="#" class="menu_btn">Order</a>
-                </div>
-                
-            </div> 
-        `;
-    });
-    } catch (err) {
-    console.error('Error loading menu:', err);
-    }
-    }
-    loadDrinkMenu();
+const snacksBtn = document.querySelector('.menu-button.snack');
+snacksBtn.addEventListener('click', () => {
+  const scrollY = window.scrollY;
+  renderMenu('snacks').then(() => {
+    // optional: keep or remove this if it feels jerky
     window.scrollTo(0, scrollY);
-}
-);
+  });
+});
+
+const dessertBtn = document.querySelector('.menu-button.dessert');
+dessertBtn.addEventListener('click', () => {
+  const scrollY = window.scrollY;
+  renderMenu('dessert').then(() => {
+    window.scrollTo(0, scrollY);
+  });
+});
+const drinkBtn = document.querySelector('.menu-button.drink');
+drinkBtn.addEventListener('click', () => {
+  const scrollY = window.scrollY;
+  renderMenu('drink').then(() => {
+    window.scrollTo(0, scrollY);
+  });
+});

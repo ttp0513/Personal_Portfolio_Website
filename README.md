@@ -42,9 +42,11 @@ Each log entry represents a milestone in my process of learning, problem-solving
 | **Oct 21 2025** | Built the structure for Home and About pages | Practiced HTML/CSS/JS and responsive design |
 | **Oct 24 2025** | Added navigation bar and footer | Learned how to create reusable components |
 | **Oct 29 2025** | Added About page | Practiced Layout - Plan to discover more dynamic and CSS styles to make the page more impressive |
-| **Nov 2025** *(planned)* | Started integrating TailwindCSS | Explored utility-first styling and layout control |
-| **Dec 2025** *(planned)* | Begin building Projects section | Will include project cards with hover effects |
-| **Jan 2026** *(planned)* | Add backend contact form integration | Goal: learn basic form handling and APIs |
+| **Nov 11 2025**  | Added Menu page | Explored grid-layout |
+| **Nov 16 2025**  | Add Menu Items and JS DOM | Leveraged DOM to make the menu page responsive |
+| **Nov 19 2025**  | Completed the Menu page and Add Contact Form | Practiced API call for menu page and Explored third-party Formspree to test contact form functionality |
+| **Nov 20 2025**  | Add LocalStorage to the Order and favorite menu items | Practiced LocalStorage |
+
 
 > I document every key milestone to track growth and identify areas for refinement — turning each iteration into a learning opportunity.
 ---
