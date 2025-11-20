@@ -18,17 +18,24 @@
                 <div class="logo">
                     <img src="./asset/logos/store_logo.png" title ="The Phan Restaurant Logo">
                 </div>
-                <!-- Nav Bar Icon -->
+
+                <!-- Navigation -->
                 <div class="nav-bar">
-                    <span></span>
+
+                    <!-- Nav Bar Icon -->
+                    <span class="nav-hamburger"></span>
+
+
                 </div>
+
                 <nav class="nav-items">
                     <ul>
-                        <li class="nav-item"><a href="home" title= 'home-page'>Home</a></li> 
-                        <li class="nav-item"><a href="aboutus" title= 'about-page'>About Us</a></li>
-                        <li class="nav-item"><a href="menu" title= 'menu-page'>Menu</a></li> 
-                        <li class="nav-item"><a href="review" title= 'review-page'>Review</a></li>
-                        <li class="nav-item"><a href="contact" title= 'contact-page'>Contact</a></li>
+                        <li class="nav-item"><a href="#home" title= 'home-page'>Home</a></li> 
+                        <li class="nav-item"><a href="#about" title= 'about-page'>About Us</a></li>
+                        <li class="nav-item"><a href="#menu" title= 'menu-page'>Menu</a></li> 
+                        <li class="nav-item"><a href="#order" title= 'order'>Order</a></li> 
+                        <li class="nav-item"><a href="#review" title= 'review-page'>Review</a></li>
+                        <li class="nav-item"><a href="#contact" title= 'contact-page'>Contact</a></li>
                         
                     </ul>
                 <div class="logo">
@@ -109,7 +116,36 @@
             </div>
         </div>
      </section>
+    <!-- Contact Section -->
+     <section id = "contact" class="contact section-padding">
+        <div class="container">
+        <div class="row">
+            <div class="contact-left-col">
+                <img src="./asset/img/contact-image-2.jpg" alt="Contact Us Image">
+            </div>
+            <div class="contact-right-col">
+                <div class="contact-title">
+                    <h2 data-title="Get In Touch">Contact Us</h2>
+                    <form action="https://formspree.io/f/xblwkzpz" method="POST">
+                    <fieldset>
+                        <label for="name">Name: <input id="name" name="name" type="text" required /></label>
+                        <label for="phone">Phone: <input id="phone" name="phone" type="tel" required /></label>
+                        <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+                        <label for="message">Message:
+                        <textarea id="message" name="message" rows="5" cols="30" required></textarea>
+                        </label>
+                    </fieldset>
+                    <button class="contact-submit" type="submit">Submit</button>
+                    </form>
+            </div>
+        </div>
 
+
+        </div>
+        </div>
+
+        </div>
+        </section>
     <!--Footer-->
     <footer>
         <div class="footer_main">
@@ -134,9 +170,9 @@
 
             <div class="footer_tag">
                 <h2>Contact</h2>
-                <p>+1 12 3456 789</p>
-                <p>+1 25 5568456</p>
-                <p>thephankitchen@tpk.com</p>
+                <p><strong>Phone</strong>+1 12 3456 789</p>
+                <p><strong>Email:</strong> thephankitchen@tpk.com</p>
+                <p><strong>Open Hour</strong>Fri - Sun: 11 AM - 5 PM</p>
             </div>
 
             <div class="footer_tag">

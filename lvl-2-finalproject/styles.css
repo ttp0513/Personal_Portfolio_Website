@@ -2,12 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Niconne&family=Oregano:ital@0;1&display=swap');
 /* Global Styles */
 :root {
-    --main-color: #3b3305;
+    --main-color: #2d2200;
     --secondary-color:#f5f0d0;
     --title: #c7983c;
-    --about-color: #4a410a;
-    --menu-color: #3e380c;
+    --quote-color: #745a1e;
+    --about-color: #2d2200;
+    --contact-color: #1b1501;
     --footer-color: #151000;
+    --text-color: #fac031;
 }
 
 * {
@@ -22,7 +24,7 @@ body{
 }
 
 .section-padding{
-    padding: 40px 0;
+    padding: 40px 0 20px 0;
 }
 
 
@@ -80,7 +82,6 @@ Container and Row Styles */
 }
 
 
-
 /* Logo styles */   
 .top .logo img {
     width: 120px;
@@ -100,7 +101,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 }
 
-.top .nav-bar span{
+.top .nav-bar span.nav-hamburger{
     display: block;
     height: 3px;
     width: 40px;
@@ -108,7 +109,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     position: relative;
 }
 
-.top .nav-bar span::before {
+.top .nav-bar span.nav-hamburger::before {
     height: 100%;
     width: 100%;
     content: '';
@@ -118,7 +119,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     background-color: var(--secondary-color);    
 }
 
-.top .nav-bar span::after {
+.top .nav-bar span.nav-hamburger::after {
     height: 100%;
     width: 100%;
     content: '';
@@ -130,17 +131,18 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 } 
 
 /* Convert hamburger-nav icon to cross-nav icon when clicked */
-.top .nav-bar.active span {
+.top .nav-bar.active span.nav-hamburger {
     background-color: transparent;
 }
 
-.top .nav-bar.active span::before {
+.top .nav-bar.active span.nav-hamburger::before {
     transform: rotate(-135deg);
 }
 
-.top .nav-bar.active span::after {  
+.top .nav-bar.active span.nav-hamburger::after {  
     transform: rotate(135deg);
 }
+
 
 /* nav item animation when nav bar is active */
 .top .nav-bar.active {
@@ -323,8 +325,12 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     align-items: center;
 }
 
-.about{
-    background-color: var(--about-color);
+.about {
+    background-image: url('./asset/img/background-about.png');
+    background-size: calc(100% + 200px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 /* About Title */ 
@@ -401,25 +407,26 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 /* About - Quote box */
 .quote-box {
-  background-color: var(--main-color);
+  background-color: var(--quote-color);
   color: var(--secondary-color);
   font-family: 'Dancing Script', cursive;
   font-size: 56px;
-  padding: 20px;
-  border-left: 5px solid var(--title);
-  width: 80%;
+  padding: 20px 10px;
+  border-radius: 10px;
+  border-left: 20px solid var(--title);
+  width: 90%;
   margin: 30px 0;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
 .quote-box.active {
   animation: fadeFloat 2.5s ease-out forwards;
-  opacity: 0;
+  opacity: 40;
 }
 
 .quote-box span {
-  font-size: 40px;
+  font-size: 36px;
   display: block;
   margin-top: 10px;
   font-style: italic;
@@ -437,8 +444,14 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 }
 
 /* Menu Styles */
+
 .menu{
-    background-color: var(--menu-color);
+    background-color: var(--main-color);
+    background-image: url('./asset/img/background-menu.png');
+    background-size: calc(100% + 200px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 }
 
 .menu-title, .menu-nav {
@@ -485,8 +498,8 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 /* Menu Container */
 .menu-container{
-    width: 100%;
-    min-height: 100vh;
+    width: 90%;
+    height: auto;
     margin: 30px auto;
     display: grid; 
     justify-items: center;
@@ -499,7 +512,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 .menu-container .menu_card{
     width: 90%;
-    height: 95%;
+    height: 540px;
     padding-top: 10px;
     background-color: var(--secondary-color);
     border-radius: 10px;
@@ -542,7 +555,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 .menu-container .menu_card .menu_info p{
     width: 90%;
-    height: 80px;
+    height: 70px;
     margin: 0 15px;
     text-align: center;
     line-height: 24px;
@@ -552,11 +565,11 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 .menu-container .menu_card .menu_info h3{
     text-align: center;
-    margin-bottom: 20px;
     font-size: 32px;
     color: #3b3305;
     font-family: "Dancing Script", cursive;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 
@@ -566,7 +579,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     justify-content: center;
     text-decoration: none;
     color: white;
-    background: #000;
+    background: var(--main-color);
     padding: 8px 10px;
     margin: 0 80px;
     font-size: 20px;
@@ -577,16 +590,110 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 }
 
 .menu-container .menu_card .menu_info .menu_btn:hover{
-    background-color: var(--main-color);
-    color: var(--secondary-color);
     transform: scale(1.2);
 }
 
-/* Footer Styles */
+/*Contact Section Styles */
+.contact{
+    background-color: var(--contact-color);
+}
+
+.contact-title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.contact-title h2 {
+    font-size: 55px;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    padding-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.contact-title h2::before{
+    content: attr(data-title);
+    display: block;
+    color: var(--title);
+    font-size: 30px;
+}
+
+.contact .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+.contact-left-col img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact-right-col form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: auto;
+}
+
+.contact-right-col fieldset{
+    border: none;
+    margin: 10px;
+    width: 80%;
+}
+
+.contact-right-col form label{
+  display: block;
+  margin: 0.5rem 0;
+  color: var(--secondary-color);
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: left;
+}
+
+.contact-right-col form input, .contact-right-col form textarea{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    background-color: var(--secondary-color)
+}
+
+.contact-right-col button{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    width: 300px;
+    font-weight: 600;  
+}
+
+.contact-right-col button:hover{
+    transform: scale(1.1);
+    background-color: var(--title);
+    color: var(--secondary-color);
+}
+
+.contact-right-col form input:focus, .contact-right-col form textarea:focus{
+    outline: 5px solid var(--title);
+}   
+/* Footer Styles */ 
 
 footer{
     width: 100%;
-    padding: 30px 0 0 20px;
+    padding: 30px 0 0 0;
     background: var(--footer-color);
 }
 
@@ -601,7 +708,7 @@ footer .footer_main .footer_tag{
 
 footer .footer_main .footer_tag h2{
     color: var(--secondary-color);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-size: 30px;
 }
 
@@ -612,6 +719,7 @@ footer .footer_main .footer_tag p, a{
     flex-direction: column;
     align-items: center;
     margin: 10px;
+    font-weight: 500;
 }
 
 
@@ -622,6 +730,17 @@ footer .footer_main .footer_tag p{
     margin: 10px;
 }
 
+footer .footer_main .footer_tag p:hover{
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag a:hover{
+    color: var(--text-color);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
 footer .footer_main .footer_tag i{
     margin: 0 5px;
     cursor: pointer;
@@ -630,7 +749,7 @@ footer .footer_main .footer_tag i{
 }
 
 footer .footer_main .footer_tag i:hover{
-    color: #fac031;
+    color: var(--text-color);
 }
 
 footer .end{
@@ -642,22 +761,8 @@ footer .end{
 }
 
 footer .end span{
-    color: #fac031;
+    color: var(--text-color);
     margin-left: 10px;
-}
-
-::-webkit-scrollbar{
-    width: 13px;
-}
-
-::-webkit-scrollbar-track{
-    border-radius: 15px;
-    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
-}
-
-::-webkit-scrollbar-thumb{
-    background: #fac031;
-    border-radius: 15px;
 }
 
 footer {
