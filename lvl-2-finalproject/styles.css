@@ -273,9 +273,13 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 .hero-image .hero-image-content {
     text-align: center;
     color: rgb(237, 239, 226);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero-image-content h2{
+.hero-image .hero-image-content h2{
     font-size: 70px;    
     font-weight: bold;
     margin: -120px 0 0px 0;
@@ -286,7 +290,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 }
 
-.hero-image-content p {
+.hero-image .hero-image-content p {
     font-size: 35px;
     font-family: "Dancing Script", monospace;
     font-optical-sizing: auto;
@@ -298,7 +302,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 /* Hero Button Styles */
 
-.hero-btn {
+.hero-image .hero-image-content .hero-btn {
     background-color: transparent;
     padding: 15px 30px;
     border: 2.5px solid var(--main-color); 
@@ -310,7 +314,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     cursor: pointer;
 }
 
-.hero-btn:hover {
+.hero-image .hero-image-content .hero-btn:hover {
     background-color: var(--main-color);
     color: var(--secondary-color);
     transition: all 0.3s ease;
@@ -465,6 +469,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
   flex-wrap: wrap;
   justify-content: center;
 }
+
 .menu-button {
     background-color: transparent;
     margin: 0px 35px;
@@ -542,10 +547,19 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     transform: scale(0.8);
 }
 
+.menu-container .menu_card .menu_info{
+    width: 100%;
+    height: 220px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .menu-container .menu_card .menu_info h2{
     width: 90%;
     text-align: center;
-    margin: 10px auto 10px auto;
     font-size: 32px;
     color: var(--main-color);
     font-family: "Dancing Script", cursive;
@@ -554,8 +568,8 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 }
 
 .menu-container .menu_card .menu_info p{
-    width: 90%;
-    height: 70px;
+    width: 100%;
+    height: 60px;
     margin: 0 15px;
     text-align: center;
     line-height: 24px;
@@ -569,29 +583,51 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     color: #3b3305;
     font-family: "Dancing Script", cursive;
     font-weight: 700;
-    margin-bottom: 10px;
 }
 
-
-.menu-container .menu_card .menu_info .menu_btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+.menu-container .menu_card .menu_info a{
+    width: 40%;
     color: white;
     background: var(--main-color);
     padding: 8px 10px;
-    margin: 0 80px;
     font-size: 20px;
     cursor: pointer;
     transition: 0.3s;
     border-radius: 50px;
     transition: all 0.3s ease;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .menu-container .menu_card .menu_info .menu_btn:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
+    background-color: var(--title);
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 22px;
 }
+
+.menu-container .menu_card .menu_info .favorite {
+  cursor: pointer;
+  font-size: 28px;
+  color: var(--main-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--about-color);   /* black border */
+  border-radius: 50%;        /* optional: make it circular */
+  padding: 8px;   
+}
+
+.menu-container .menu_card .menu_info .favorite i {
+  color: #fac031;            
+  font-size: 26px;           
+}
+
+.menu-container .menu_card .menu_info .favorite.is-favorited {
+  background-color: var(--main-color);   
+}
+
+
 
 /*Contact Section Styles */
 .contact{
