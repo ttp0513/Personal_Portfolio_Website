@@ -94,7 +94,7 @@
     "name": "Kumquat Yogurt Smoothie",
     "description": "Zesty kumquat paired with smooth yogurt",
     "price": 4.50,
-    "image_url": "https://www.richs.com.vn/images/cong-thuc/Th%E1%BB%A9c%20u%E1%BB%91ng/Yogurt-Tac/DSC02281.jpg"
+    "image_url": "./asset/img/kumquat-yogurt.png"
   },
   {
     "name": "Lychee Ade",

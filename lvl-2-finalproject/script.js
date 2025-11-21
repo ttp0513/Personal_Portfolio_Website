@@ -79,21 +79,26 @@ async function renderMenu(categoryKey) {
   }
 }
 
-// 3 Default load = specials
-renderMenu('specials');
+// 3 On load: restore last category or default to 'specials'
+const lastMenuViewed = localStorage.getItem('lastMenuCategory') || 'specials';
+renderMenu(lastMenuViewed);
 
 // 4 Button listeners
 const special = document.querySelector('.menu-button.special');
 special.addEventListener('click', () => {
-  renderMenu('specials');
+  const scrollY = window.scrollY;
+  renderMenu('specials').then(() => {
+    window.scrollTo(0, scrollY);
+    localStorage.setItem('lastMenuCategory', 'specials');
+  });
 });
 
 const snacksBtn = document.querySelector('.menu-button.snack');
 snacksBtn.addEventListener('click', () => {
   const scrollY = window.scrollY;
   renderMenu('snacks').then(() => {
-    // optional: keep or remove this if it feels jerky
     window.scrollTo(0, scrollY);
+    localStorage.setItem('lastMenuCategory', 'snacks');
   });
 });
 
@@ -102,6 +107,7 @@ dessertBtn.addEventListener('click', () => {
   const scrollY = window.scrollY;
   renderMenu('dessert').then(() => {
     window.scrollTo(0, scrollY);
+    localStorage.setItem('lastMenuCategory', 'dessert');
   });
 });
 const drinkBtn = document.querySelector('.menu-button.drink');
@@ -109,6 +115,7 @@ drinkBtn.addEventListener('click', () => {
   const scrollY = window.scrollY;
   renderMenu('drink').then(() => {
     window.scrollTo(0, scrollY);
+    localStorage.setItem('lastMenuCategory', 'drink');
   });
 });
 
