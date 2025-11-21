@@ -557,23 +557,56 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     align-items: center;
 }
 
-.menu-container .menu_card .menu_info h2{
+.menu-container .menu_card .menu_info h2 {
     width: 90%;
-    text-align: center;
-    font-size: 32px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* left spacer, centered, right */
+    align-items: center;
+    font-size: 28px;
     color: var(--main-color);
     font-family: "Dancing Script", cursive;
     font-weight: 700;
     overflow-x: hidden;
+    text-align: center;
 }
 
+.menu-container .menu_card .menu_info h2 .menu-title {
+    grid-column: 2; /* center */
+}
+
+.menu-container .menu_card .menu_info h2 .favorite {
+    grid-column: 3;
+    justify-self: end; /* right edge */
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--main-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--about-color);   /* black border */
+    border-radius: 50%;        /* optional: make it circular */
+    padding: 8px;   
+}
+
+.menu-container .menu_card .menu_info .favorite i {
+  color: #fac031;            
+  font-size: 22px;           
+}
+
+.menu-container .menu_card .menu_info .favorite.is-favorited {
+  background-color: var(--main-color);   
+}
+
+
 .menu-container .menu_card .menu_info p{
-    width: 100%;
+    width: 80%;
     height: 60px;
     margin: 0 15px;
     text-align: center;
     line-height: 24px;
-    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
     overflow: hidden;
 }
 
@@ -606,26 +639,6 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     font-size: 22px;
 }
 
-.menu-container .menu_card .menu_info .favorite {
-  cursor: pointer;
-  font-size: 28px;
-  color: var(--main-color);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--about-color);   /* black border */
-  border-radius: 50%;        /* optional: make it circular */
-  padding: 8px;   
-}
-
-.menu-container .menu_card .menu_info .favorite i {
-  color: #fac031;            
-  font-size: 26px;           
-}
-
-.menu-container .menu_card .menu_info .favorite.is-favorited {
-  background-color: var(--main-color);   
-}
 
 
 

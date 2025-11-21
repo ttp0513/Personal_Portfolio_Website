@@ -54,10 +54,12 @@ async function renderMenu(categoryKey) {
           </div>
 
           <div class="menu_info">
-            <h2>${name} 
-                <span class="favorite" data-name="${name}">
-                    <i class="fa-regular fa-heart"></i>
-                </span>
+            <h2>
+              <span></span>
+              <span class="menu-name">${name}</span> 
+              <span class="favorite" data-name="${name}">
+                  <i class="fa-regular fa-heart"></i>
+              </span>
             </h2>
             <p>${description}</p>
             <h3>$${price.toFixed(2)}</h3>
