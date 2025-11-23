@@ -7,10 +7,12 @@ navBar.addEventListener('click', () => {
     
 });
 
+
 // Add Event Listener to Cart Icon
-const cart = document.querySelector(".cart-icon");
+const cartIcon = document.querySelector(".cart-icon");
 const cartTab = document.querySelector(".cart-tab");
-cart.addEventListener('click', () => {
+
+cartIcon.addEventListener('click', () => {
   cartTab.classList.toggle('active');
 })
 
@@ -199,8 +201,7 @@ menuContainer.addEventListener('mouseout', (e) => {
 });
 
 
-// Populate the Order Cart with Selected Menu Items
-
+// Cart Tab Scripts
 const cartList = document.querySelector(".cart-list");
 
 menuContainer.addEventListener("click", (e)=>{
@@ -208,6 +209,13 @@ menuContainer.addEventListener("click", (e)=>{
   if (!menuBtn) return;
   e.preventDefault();
 
+  // Add animation class to order button
+  menuBtn.classList.add("clicked");
+  setTimeout(() => {
+    menuBtn.classList.remove("clicked");
+  }, 200);
+
+  // Populate order cart
   const orderCard = menuBtn.closest('.menu_card');
   const orderImg = orderCard.querySelector('.menu_image img');
 
@@ -219,25 +227,92 @@ menuContainer.addEventListener("click", (e)=>{
   const orderPriceText = orderCard.querySelector("h3")?.textContent?.trim() || "";
   const orderPriceNum = parseFloat(orderPriceText.replace(/[^0-9.]/g, "")); // 5.5
 
+  // Check if the menu item already exists in the cart tab
+  const existingItem = cartList.querySelector(`.cart-item .quantity[data-name="${orderName}"]`);
 
-  // Create cart item HTML
-  const cartItemHTML = `
-    <div class="cart-item">
-      <div class="cart-img">
-        <img src="${orderImageSrc}" alt="${orderImageAlt}" />
+  // if exists, increase the quantity of that cart item
+ if (existingItem) {
+    // ✅ If exists, increment quantity
+    let quantity = parseInt(existingItem.textContent, 10);
+    quantity++;
+    existingItem.textContent = quantity;
+  } 
+  // if not; Create cart item HTML
+  else {
+    const cartItemHTML = `
+      <div class="cart-item">
+        <div class="cart-img">
+          <img src="${orderImageSrc}" alt="${orderImageAlt}" />
+        </div>
+        <div class="cart-name">${orderName}
+        </div>
+        <div class="cart-price">$${orderPriceNum.toFixed(2)}
+        </div>
+        <div class="cart-quantity">
+          <span class="minus" aria-label="Decrease quantity">−</span>
+          <span class="quantity" data-name="${orderName}">1</span>
+          <span class="plus" aria-label="Increase quantity">+</span>
+        </div>
+        
       </div>
-      <div class="cart-name">${orderName}
-      </div>
-      <div class="cart-price">$${orderPriceNum.toFixed(2)}
-      </div>
-      <div class="cart-quantity">
-        <span class="minus" aria-label="Decrease quantity">−</span>
-        <span class="quantity" data-name="${orderName}">1</span>
-        <span class="plus" aria-label="Increase quantity">+</span>
-      </div>
-    </div>
-  `;
-
-  // Append to cart list
-  cartList.innerHTML += cartItemHTML;
+    `;
+      cartList.innerHTML += cartItemHTML;
+  }
+  //Update cart Total & cart Count
+  updateCartTotal();
 });
+
+// Update Cart Total Function whenever new menu item is added to cart
+function updateCartTotal() {
+  let total = 0;
+  let itemCount = 0;
+  const cartItems = document.querySelectorAll(".cart-item");
+  const cartTotal = document.querySelector(".cart-total")
+
+  cartItems.forEach(item => {
+    const priceEl = item.querySelector(".cart-price");
+    const quantityEl = item.querySelector(".quantity");
+
+    const price = parseFloat(priceEl.textContent.replace(/[^0-9.]/g, ""));
+    const quantity = parseInt(quantityEl.textContent, 10);
+
+    total += price * quantity;
+    itemCount += quantity;
+  });
+
+  // update total price in cart tab
+  if (cartTotal) {
+    cartTotal.textContent = `Total: $${total.toFixed(2)}`;
+  }
+
+  // update cart icon badge
+  const cartIconNum = document.querySelector(".cart-count");
+  if (cartIconNum) {
+    cartIconNum.textContent = itemCount;
+  }
+
+};
+
+// Add Listener to + and - button in the Cart Tab
+cartList.addEventListener("click", (e) => {
+  if (e.target.classList.contains("plus") || e.target.classList.contains("minus")) {
+    const item = e.target.closest(".cart-item");
+    const quantityEl = item.querySelector(".quantity");
+    let quantity = parseInt(quantityEl.textContent, 10);
+
+    if (e.target.classList.contains("plus")) {
+      quantity++;
+      quantityEl.textContent = quantity; 
+    } else if (e.target.classList.contains("minus")) {
+        if (quantity > 1) {
+          quantity--;
+          quantityEl.textContent = quantity;
+        } else {
+        // remove the cart item entirely
+        item.remove();
+      }
+    }
+    updateCartTotal();
+  }
+});
+
