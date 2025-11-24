@@ -4,7 +4,7 @@ I’m a **Software & Web Developer** who approaches every project with a **syste
 
 Since starting my web development journey in **August 2025**, I’ve been focused on building a strong foundation in **frontend development**, while learning how to plan, structure, and deliver projects that reflect real-world development workflows.
 
-# Personal Portfolio Website
+# Personal Project - My Own Restaurant Website
 ## My Approach
 I believe that great websites are the result of **clarity, structure, and iteration**, and by **breaking complex problems into smaller, solvable components**  
 
@@ -15,12 +15,12 @@ My development process focuses on three key principles:
 
 ## Planned Sections
 
-- **Home / Hero Page** – Simple introduction and navigation to key sections.  
-- **About** – My story, learning path, and development philosophy.  
-- **Experience** – Projects, learning milestones, and key takeaways.  
-- **Projects** – A showcase of my hands-on work and what I’ve built so far.  
-- **Contact** – A responsive contact form and social links.  
-- **Resume** – Downloadable résumé with my latest experiences and skills.
+- **Home / Hero Page** – Welcoming introduction with restaurant branding, featured dishes, and navigation to key sections.  
+- **About** – The story behind the restaurant, its mission, and the inspiration for the cuisine.  
+- **Menu** – A showcase of food categories (specials, snacks, desserts, drinks) with descriptions and prices.  
+- **Order / Cart** – Interactive ordering system where customers can add items, view their cart, and check out.  
+- **Contact** – A responsive contact form for inquiries.  
+-- **Footer** - Location, hours of operation, phone number,
 
 ## Current Tech Stack
 
@@ -46,6 +46,8 @@ Each log entry represents a milestone in my process of learning, problem-solving
 | **Nov 16 2025**  | Add Menu Items and JS DOM | Leveraged DOM to make the menu page responsive |
 | **Nov 19 2025**  | Completed the Menu page and Add Contact Form | Practiced API call for menu page and Explored third-party Formspree to test contact form functionality |
 | **Nov 20 2025**  | Add LocalStorage to the Order and favorite menu items | Practiced LocalStorage |
+| **Nov 23 2025**  | Add events and total calculations to the cart tab | Practiced DOM events |
+| **Nov 24 2025**  | Finalizing the project
 
 
 > I document every key milestone to track growth and identify areas for refinement — turning each iteration into a learning opportunity.
