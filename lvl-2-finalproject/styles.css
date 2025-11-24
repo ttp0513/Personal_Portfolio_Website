@@ -331,6 +331,12 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     border: none;
     font-weight: 500;
     cursor: pointer;
+    font-size: 24px;
+    border-right: 2px solid var(--quote-color);
+}
+
+.top .cart-tab .cart-btn button:hover{
+    font-size: 30px;
 }
 
 .top .cart-tab .cart-item .cart-img img{
@@ -836,7 +842,8 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 
 .menu-container .menu_card .menu_info .menu_order.clicked {
   transform: scale(1.1);          
-  background-color: var(--accent-color);
+  background-color: var(--main-color);
+  color: var(--secondary-color);
 }
 
 /*Contact Section Styles */

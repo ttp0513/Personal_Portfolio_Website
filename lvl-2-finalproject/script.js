@@ -224,7 +224,7 @@ menuContainer.addEventListener("click", (e)=>{
   menuBtn.classList.add("clicked");
   setTimeout(() => {
     menuBtn.classList.remove("clicked");
-  }, 200);
+  }, 400);
 
   // Populate order cart
   const orderCard = menuBtn.closest('.menu_card');
@@ -236,14 +236,14 @@ menuContainer.addEventListener("click", (e)=>{
   const orderImageAlt = orderImg?.getAttribute('alt') || orderName;
 
   const orderPriceText = orderCard.querySelector("h3")?.textContent?.trim() || "";
-  const orderPriceNum = parseFloat(orderPriceText.replace(/[^0-9.]/g, "")); // 5.5
+  const orderPriceNum = parseFloat(orderPriceText.replace(/[^0-9.]/g, "")); 
 
   // Check if the menu item already exists in the cart tab
   const existingItem = cartList.querySelector(`.cart-item .quantity[data-name="${orderName}"]`);
 
-  // if exists, increase the quantity of that cart item
+  // If exists, increase the quantity of that cart item
  if (existingItem) {
-    // ✅ If exists, increment quantity
+    //  If exists, increment quantity
     let quantity = parseInt(existingItem.textContent, 10);
     quantity++;
     existingItem.textContent = quantity;
