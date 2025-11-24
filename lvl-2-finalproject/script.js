@@ -10,11 +10,22 @@ navBar.addEventListener('click', () => {
 
 // Add Event Listener to Cart Icon
 const cartIcon = document.querySelector(".cart-icon");
+const navOrder = document.getElementById("order");
+
 const cartTab = document.querySelector(".cart-tab");
+
 
 cartIcon.addEventListener('click', () => {
   cartTab.classList.toggle('active');
 })
+
+//Add Event to Order in Nav Bar
+const orderLink = document.querySelector(".order-link");
+orderLink.addEventListener("click", (e) => {
+  e.preventDefault(); // stop jump to #order
+  cartTab.classList.toggle("active"); // toggle cart tab
+});
+
 
 // Add Event to Top section when the window scrolls down
 const toP = document.querySelector('.top')
@@ -316,3 +327,8 @@ cartList.addEventListener("click", (e) => {
   }
 });
 
+// Add Listern to the Close button
+const closeBtn = document.querySelector('.close');
+closeBtn.addEventListener('click', () => {
+  cartTab.classList.remove('active');
+})

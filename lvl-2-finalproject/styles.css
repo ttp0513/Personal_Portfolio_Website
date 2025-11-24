@@ -50,7 +50,7 @@ Container and Row Styles */
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin: 10px 80px;
+    margin: 10px 50px;
 }
 
 /* Top Section */
@@ -104,7 +104,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     display: flex;
     justify-content: center;
     align-items: center ;
-    margin-right: 50px;
+    margin-right: 40px;
 }
 
 .top .nav-bar span.nav-hamburger{
@@ -139,6 +139,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 /* Convert hamburger-nav icon to cross-nav icon when clicked */
 .top .nav-bar.active span.nav-hamburger {
     background-color: transparent;
+
 }
 
 .top .nav-bar.active span.nav-hamburger::before {
@@ -162,12 +163,12 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 /* Navigation item styles */
 .top .nav-items {
     position: absolute;
-    width: 13vw;
+    width: 200px;
     height: 100vh;
-    background-color: var(--main-color);
+    background-color: var(--quote-color);
     right: 0;
     top: 0;
-    padding: 77px 0 0 0;
+    padding: 78px 0 0 0;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     opacity: 0.8;
@@ -194,6 +195,40 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
   -moz-box-sizing: border-box;  
   -webkit-box-sizing: border-box; 
    box-sizing: border-box;  
+}
+
+/* Menu item hover effect */
+
+.top .nav-items a:hover{ 
+    border-bottom: 0px; 
+    color: var(--main-color);
+}
+
+.top .nav-items a:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  -webkit-transition: all 0.3s ease 0s; 
+  transition: all 0.3s ease 0s; 
+  z-index: -1;
+  background: var(--secondary-color); 
+}
+
+.top .nav-items a:hover:after {
+     width: 100%;
+    }
+
+/* Nav Logo Style */
+.top .nav-items .logo img {
+    width: 200px;
+    margin-top: 45vh;
+}
+
+.top .nav-items .logo {
+    text-align: center;
 }
 
 /* Cart Icon Styles*/
@@ -227,6 +262,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     transition: all 0.5 ease;
 
 }
+
 /* Cart Styles*/
 .top .cart-tab {
     background-color: var(--quote-color);
@@ -243,6 +279,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
     border-top: 3px solid var(--secondary-color);
     transform: translateY(100%);
     transition: transform 0.3s ease;
+    z-index: 10000;
     
 }
 
@@ -347,39 +384,7 @@ filter: brightness(0) saturate(90%) invert(90%) sepia(10%) saturate(300%) hue-ro
 }
 
 
-/* Menu item hover effect */
 
-.top .nav-items a:hover{ 
-    border-bottom: 0px; 
-    color: var(--main-color);
-}
-
-.top .nav-items a:after { 
-  content: "";
-  height: 100%; 
-  left: 0; 
-  top: 0; 
-  width: 0px;  
-  position: absolute; 
-  -webkit-transition: all 0.3s ease 0s; 
-  transition: all 0.3s ease 0s; 
-  z-index: -1;
-  background: var(--secondary-color); 
-}
-
-.top .nav-items a:hover:after {
-     width: 100%;
-    }
-
-/* Nav Logo Style */
-.top .nav-items .logo img {
-    width: 200px;
-    margin-top: 50vh;
-}
-
-.top .nav-items .logo {
-    text-align: center;
-}
 
 
 /* Hero Section Styles */
