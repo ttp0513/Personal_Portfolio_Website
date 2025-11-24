@@ -338,3 +338,14 @@ const checkOutBtn = document.querySelector('.checkOut');
   checkOutBtn.addEventListener("click", ()=> {
     alert("Move to the payment page - WIP");
   });
+
+
+// Add a warning to the window when it is closed or refresh
+window.addEventListener("beforeunload", function (e) {
+  // If there are items in the cart, show a warning
+  const cartItems = document.querySelectorAll(".cart-item");
+  if (cartItems.length > 0) {
+    e.preventDefault(); 
+    e.returnMessage = "Your cart will be cleared if you refresh or leave this page.";
+  }
+});
