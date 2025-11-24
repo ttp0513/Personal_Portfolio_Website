@@ -327,8 +327,14 @@ cartList.addEventListener("click", (e) => {
   }
 });
 
-// Add Listern to the Close button
+// Add Click Listener to the Close button
 const closeBtn = document.querySelector('.close');
 closeBtn.addEventListener('click', () => {
   cartTab.classList.remove('active');
-})
+});
+
+// Add Click Listener to the CheckOut button
+const checkOutBtn = document.querySelector('.checkOut');
+  checkOutBtn.addEventListener("click", ()=> {
+    alert("Move to the payment page - WIP");
+  });
