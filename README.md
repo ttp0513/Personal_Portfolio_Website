@@ -1,10 +1,8 @@
 
-
-I’m a **Software & Web Developer** who approaches every project with a **system design mindset**. I believes that great products are built by **breaking complex problems into smaller, solvable components** and designing systems that evolve gracefully over time.
-
-Since starting my web development journey in **August 2025**, I’ve been focused on building a strong foundation in **frontend development**, while learning how to plan, structure, and deliver projects that reflect real-world development workflows.
-
 # Personal Project - My Own Restaurant Website
+## Overview
+This repository contains a responsive, front‑end website designed for a restaurant concept. Beyond being a technical project, it represents my childhood dream of owning a restaurant — and my drive to bring that vision to life someday. The site demonstrates my ability to combine design, interactivity, and storytelling into a cohesive digital experience.
+
 ## My Approach
 I believe that great websites are the result of **clarity, structure, and iteration**, and by **breaking complex problems into smaller, solvable components**  
 
@@ -13,7 +11,16 @@ My development process focuses on three key principles:
 2. **Break down problems** - turn big challenges into smaller, solvable parts.  
 3. **Integrate thoughtfully** - bring each component together into a cohesive system.
 
-## Planned Sections
+## Key Highlights
+Modern UI/UX: Clean layout, intuitive navigation, and mobile‑friendly responsiveness
+
+Interactive Components: JavaScript‑powered menu toggles, dynamic sections, and smooth animations
+
+Storytelling: Personal brand integration — the restaurant concept reflects my entrepreneurial vision
+
+Scalable Foundation: Built with reusable code and structured for future expansion (reservations, e‑commerce, etc.)
+
+## Sections
 
 - **Home / Hero Page** – Welcoming introduction with restaurant branding, featured dishes, and navigation to key sections.  
 - **About** – The story behind the restaurant, its mission, and the inspiration for the cuisine.  
@@ -24,12 +31,9 @@ My development process focuses on three key principles:
 
 ## Current Tech Stack
 
-**Frontend:**  
-HTML, CSS, JavaScript (ES6+), React *(learning)*, TailwindCSS *(learning)*  
-
-**Tools & Workflow:**  
-Git, GitHub, VS Code, Figma (for wireframes), Netlify / Vercel (for deployment)
-
+HTML5 – semantic structure and accessibility
+CSS3 – responsive design, custom styling, and animations
+JavaScript (ES6) – interactivity and dynamic behavior
 
 ## Development Log
 
@@ -49,9 +53,6 @@ Each log entry represents a milestone in my process of learning, problem-solving
 | **Nov 23 2025**  | Add events and total calculations to the cart tab | Practiced DOM events |
 | **Nov 24 2025**  | Finalizing the project
 
-
-> I document every key milestone to track growth and identify areas for refinement — turning each iteration into a learning opportunity.
----
-
+-- 
 > “Every great developer starts with a clear system for learning, not just coding.  
 > Building with intention is what turns small steps into real expertise.”
